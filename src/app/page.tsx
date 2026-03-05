@@ -10,7 +10,7 @@ import Education from "@/components/Education";
 
 export default function Home() {
   return (
-    <main className="min-h-screen selection:bg-accent/40 selection:text-white">
+    <main className="min-h-screen overflow-x-hidden selection:bg-accent/40 selection:text-white">
       {/* 
         Single-page layout orchestrator.
         Components handle their own scroll animations. 

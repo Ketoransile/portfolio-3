@@ -48,13 +48,13 @@ export default function Navbar() {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${scrolled
-                    ? "w-[92%] max-w-3xl"
-                    : "w-[95%] max-w-4xl"
+                className={`fixed z-50 transition-all duration-500 ${scrolled
+                    ? "w-full top-0 left-0 md:w-[92%] md:max-w-3xl md:top-4 md:left-1/2 md:-translate-x-1/2"
+                    : "w-full top-0 left-0 md:w-[95%] md:max-w-4xl md:top-4 md:left-1/2 md:-translate-x-1/2"
                     }`}
             >
                 <div
-                    className={`bg-white/60 dark:bg-black/60 backdrop-blur-2xl rounded-3xl px-6 py-3 flex items-center justify-between transition-all duration-500 ${scrolled ? "shadow-lg shadow-accent/5 dark:shadow-accent/0" : ""
+                    className={`bg-white/60 dark:bg-black/60 backdrop-blur-2xl rounded-none border-b border-border/50 md:border-none md:rounded-xl px-4 md:px-6 py-3 flex items-center justify-between transition-all duration-500 ${scrolled ? "shadow-md shadow-accent/5 dark:shadow-none" : ""
                         }`}
                 >
                     {/* Logo */}
@@ -138,7 +138,7 @@ export default function Navbar() {
                                         onClick={() => setMobileOpen(false)}
                                         className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${activeSection === link.href.replace("#", "")
                                             ? "text-accent bg-accent/10 dark:bg-accent/20"
-                                            : "text-muted-foreground hover:text-foreground hover:bg-surface"
+                                            : "text-muted-foreground hover:text-foreground hover:bg-surface dark:hover:bg-accent/10"
                                             }`}
                                     >
                                         {link.name}

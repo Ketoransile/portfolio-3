@@ -227,7 +227,7 @@ export default function Contact() {
                                     <Button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="w-full sm:w-auto h-12 px-8 bg-accent text-white hover:bg-accent-dark font-bold rounded-xl shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all duration-300 gap-3"
+                                        className="w-full sm:w-auto h-12 px-8 bg-accent text-white hover:bg-accent-dark font-bold rounded-xl shadow-lg shadow-accent/20 dark:shadow-none dark:md:shadow-lg dark:md:shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 dark:hover:shadow-none dark:md:hover:shadow-xl transition-all duration-300 gap-3"
                                     >
                                         {isSubmitting ? (
                                             <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

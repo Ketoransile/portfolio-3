@@ -83,19 +83,20 @@ export default function Skills() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
-                    className="mb-16"
+                    className="mb-16 text-center sm:text-left"
                 >
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="h-px w-12 bg-accent" />
+                    <div className="flex items-center gap-3 mb-4 justify-center sm:justify-start">
+                        <div className="h-px w-8 bg-accent" />
                         <span className="text-accent font-mono text-sm font-medium tracking-wider uppercase">
                             Tech Stack
                         </span>
+                        <div className="h-px w-8 bg-accent" />
                     </div>
                     <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
                         Skills &{" "}
                         <span className="gradient-text">Technologies</span>
                     </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl">
+                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto sm:mx-0">
                         My toolkit spans from intuitive frontends to scalable backends. I&apos;m
                         always exploring new technologies to deliver seamless, high-performance
                         solutions.
@@ -138,7 +139,7 @@ export default function Skills() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="font-display text-xl font-bold text-foreground mb-6 flex items-center gap-3"
+                        className="font-display text-xl font-bold text-foreground mb-6 flex items-center justify-center sm:justify-start gap-3"
                     >
                         <span className="w-2 h-2 rounded-full bg-accent" />
                         Languages & Frameworks
@@ -156,7 +157,7 @@ export default function Skills() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="font-display text-xl font-bold text-foreground mb-6 flex items-center gap-3"
+                        className="font-display text-xl font-bold text-foreground mb-6 flex items-center justify-center sm:justify-start gap-3"
                     >
                         <span className="w-2 h-2 rounded-full bg-accent" />
                         Tools & Platforms

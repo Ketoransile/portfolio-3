@@ -68,7 +68,7 @@ export default function Experience() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="text-xl font-display font-bold text-foreground mb-8 flex items-center gap-3"
+                            className="text-xl font-display font-bold text-foreground mb-8 flex items-center justify-center sm:justify-start gap-3"
                         >
                             <span className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent">💼</span>
                             Work Experience
@@ -82,7 +82,7 @@ export default function Experience() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, margin: "-50px" }}
                                     transition={{ delay: i * 0.2, duration: 0.5 }}
-                                    className="relative pl-8 sm:pl-0"
+                                    className="relative"
                                 >
                                     <div className="hidden sm:block absolute left-[-41px] top-6 w-5 h-5 rounded-full bg-surface border-4 border-accent z-10" />
                                     <div className="hidden sm:block absolute left-[-32px] top-10 bottom-[-40px] w-0.5 bg-border z-0" />

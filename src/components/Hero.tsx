@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FiArrowRight, FiDownload, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 export default function Hero() {
     const roles = [
-        "Software Engineer",
         "Full-Stack Developer",
         "Frontend Developer",
-        "Backend Developer"
+        "Backend Developer",
+        "Problem Solver"
     ];
 
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -26,7 +26,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 lg:pt-40 pb-20"
         >
             <div className="relative z-10 w-full">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
@@ -37,18 +37,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        {/* Status badge */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.2 }}
-                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 mb-6"
-                        >
-                            <span className="w-2 h-2 rounded-full bg-success animate-pulse-dot" />
-                            <span className="text-sm text-muted-foreground/70 font-medium">
-                                Available for freelance work
-                            </span>
-                        </motion.div>
+
 
                         {/* Name */}
                         <motion.h1
@@ -62,13 +51,24 @@ export default function Hero() {
                             <span className="gradient-text">Abdi Sileshi</span>
                         </motion.h1>
 
+                        {/* Title - Emphasizing Software Engineer */}
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4, duration: 0.7 }}
+                            className="font-display text-2xl sm:text-3xl lg:text-4xl text-foreground font-semibold mb-2"
+                        >
+                            Software Engineer
+                        </motion.h2>
+
                         {/* Role */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.7 }}
-                            className="text-xl sm:text-2xl text-muted-foreground/70 font-medium mb-6 h-8 flex items-center justify-center lg:justify-start overflow-hidden relative"
+                            className="text-base sm:text-lg text-accent-light font-medium mb-6 h-6 flex items-center justify-center lg:justify-start overflow-hidden relative"
                         >
+                            <span className="mr-2 text-muted-foreground/50">✦</span>
                             <AnimatePresence mode="wait">
                                 <motion.span
                                     key={currentRoleIndex}
@@ -76,7 +76,7 @@ export default function Hero() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.5 }}
-                                    className="absolute"
+                                    className="absolute left-6 text-muted-foreground"
                                 >
                                     {roles[currentRoleIndex]}
                                 </motion.span>
@@ -92,10 +92,10 @@ export default function Hero() {
                         >
                             I craft{" "}
                             <span className="text-foreground font-medium">
-                                scalable, beautiful web applications
-                            </span>{" "}
-                            using Next.js, React, Node.js & modern tools. Turning complex
-                            problems into elegant digital solutions.
+                                robust and beautiful digital experiences
+                            </span>.{" "}
+                            As a passionate software professional, I focus on turning complex,
+                            real-world problems into elegant, scalable solutions that make an impact.
                         </motion.p>
 
                         {/* CTA Buttons */}
@@ -107,7 +107,7 @@ export default function Hero() {
                         >
                             <Link
                                 href="#projects"
-                                className="group flex items-center gap-3 px-7 py-3.5 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5"
+                                className="group flex items-center gap-3 px-7 py-3.5 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/25 dark:shadow-none dark:md:shadow-lg dark:md:shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 dark:hover:shadow-none dark:md:hover:shadow-xl hover:-translate-y-0.5"
                             >
                                 View My Work
                                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -148,12 +148,12 @@ export default function Hero() {
                             >
                                 <FiLinkedin size={20} />
                             </a>
-                            <span className="h-6 w-px bg-border" />
                             <a
                                 href="mailto:abdisileshi123@gmail.com"
-                                className="text-sm text-muted-foreground hover:text-accent transition-colors font-mono"
+                                className="p-3 rounded-xl border border-border text-muted-foreground hover:text-foreground hover:border-accent/40 hover:bg-accent/5 transition-all duration-300"
+                                aria-label="Email"
                             >
-                                abdisileshi123@gmail.com
+                                <FiMail size={20} />
                             </a>
                         </motion.div>
                     </motion.div>

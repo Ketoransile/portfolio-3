@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const education = {
     degree: "B.Eng. Software Engineering",
     school: "Adama Science and Technology University (ASTU)",
-    year: "July 2025",
+    year: "Expected July 2026",
     location: "Adama, Ethiopia",
 };
 
@@ -75,9 +75,9 @@ export default function Education() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
-                    className="mb-16 text-center"
+                    className="mb-16 text-center sm:text-left"
                 >
-                    <div className="flex items-center justify-center gap-3 mb-4">
+                    <div className="flex items-center gap-3 mb-4 justify-center sm:justify-start">
                         <div className="h-px w-8 bg-accent" />
                         <span className="text-accent font-mono text-sm font-medium tracking-wider uppercase">
                             Academia
@@ -100,7 +100,7 @@ export default function Education() {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10 group-hover:bg-accent/20 transition-all duration-500" />
                         <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -z-10" />
 
-                        <div className="flex items-start sm:items-center gap-6 mb-8">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-8 text-center sm:text-left">
                             <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent text-3xl flex-shrink-0 shadow-inner">
                                 🎓
                             </div>
@@ -112,13 +112,13 @@ export default function Education() {
                             </div>
                         </div>
 
-                        <div className="grid sm:grid-cols-2 gap-6 mb-8 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-3">
-                                <span className="w-8 h-8 rounded-lg bg-surface-hover flex items-center justify-center text-muted-foreground/70">📍</span>
+                        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-8 text-sm text-muted-foreground">
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-3 text-center sm:text-left">
+                                <span className="w-8 h-8 rounded-lg bg-surface-hover flex items-center justify-center text-muted-foreground/70 flex-shrink-0">📍</span>
                                 <span>{education.location}</span>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <span className="w-8 h-8 rounded-lg bg-surface-hover flex items-center justify-center text-muted-foreground/70">📅</span>
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-3 text-center sm:text-left">
+                                <span className="w-8 h-8 rounded-lg bg-surface-hover flex items-center justify-center text-muted-foreground/70 flex-shrink-0">📅</span>
                                 <span className="font-mono bg-accent/10 text-accent-light px-3 py-1 rounded-md">{education.year}</span>
                             </div>
                         </div>
