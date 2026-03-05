@@ -79,18 +79,18 @@ export default function About() {
                             , ensuring robust performance and server-side logic.
                         </p>
                         <p className="text-base text-muted-foreground leading-relaxed">
-                            Currently pursuing a B.Sc. in Software Engineering at Adama Science
-                            and Technology University, I&apos;m also diving deeper into mobile
-                            development with React Native. I thrive in collaborative
-                            environments and enjoy tackling challenging problems with creative
-                            solutions.
+                            Having earned my B.Sc. in Software Engineering from Adama Science
+                            and Technology University, I&apos;ve spent over 3 years turning complex
+                            requirements into seamless, scalable web applications. I thrive in collaborative
+                            environments, effectively utilizing over 15+ modern technologies to tackle
+                            challenging problems with creative, user-focused solutions.
                         </p>
 
                         {/* Quick stats */}
                         <div className="grid grid-cols-3 gap-4 pt-4">
                             {[
-                                { value: "6+", label: "Projects Built" },
-                                { value: "1+", label: "Years Exp." },
+                                { value: "15+", label: "Projects Built" },
+                                { value: "3+", label: "Years Exp." },
                                 { value: "15+", label: "Technologies" },
                             ].map((stat, i) => (
                                 <motion.div
