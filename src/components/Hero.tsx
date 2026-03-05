@@ -61,12 +61,11 @@ export default function Hero() {
                             Software Engineer
                         </motion.h2>
 
-                        {/* Role */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.7 }}
-                            className="text-base sm:text-lg text-accent-light font-medium mb-6 h-6 flex items-center justify-center lg:justify-start overflow-hidden relative"
+                            className="text-base sm:text-lg text-accent-light font-medium mb-6 h-6 flex items-center justify-center lg:justify-start"
                         >
                             <span className="mr-2 text-muted-foreground/50">✦</span>
                             <AnimatePresence mode="wait">
@@ -76,7 +75,7 @@ export default function Hero() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.5 }}
-                                    className="absolute left-6 text-muted-foreground"
+                                    className="text-muted-foreground whitespace-nowrap"
                                 >
                                     {roles[currentRoleIndex]}
                                 </motion.span>
@@ -167,7 +166,7 @@ export default function Hero() {
                     >
                         <div className="relative">
                             {/* Image container */}
-                            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-[22rem] lg:h-[22rem] rounded-full overflow-hidden border-4 border-accent/20 dark:border-accent/40 shadow-2xl shine-effect">
+                            <div className="relative w-44 h-44 sm:w-60 sm:h-60 lg:w-[22rem] lg:h-[22rem] rounded-full overflow-hidden border-4 border-accent/20 dark:border-accent/40 shadow-2xl shine-effect mb-4 lg:mb-0">
                                 <Image
                                     src="/myFinalImage.png"
                                     alt="Abdi Sileshi Worku"
