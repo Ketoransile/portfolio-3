@@ -112,7 +112,7 @@ export default function Hero() {
                                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link
-                                href="https://drive.google.com/file/d/1L9sYzYjDeH14Hqpj6eYLIQ-i6v7V-0ro/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/1bqmJFrNjhmys262Ear6ZuCF3cAIsuHzm/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group flex items-center gap-3 px-7 py-3.5 border border-border text-muted-foreground/70 font-semibold rounded-xl hover:border-accent/40 hover:text-foreground hover:bg-accent/5 transition-all duration-300 hover:-translate-y-0.5"
@@ -129,7 +129,7 @@ export default function Hero() {
                             transition={{ delay: 0.9 }}
                             className="flex items-center gap-4 justify-center lg:justify-start"
                         >
-                            <a
+                            <Link
                                 href="https://github.com/Ketoransile"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -137,8 +137,8 @@ export default function Hero() {
                                 aria-label="GitHub"
                             >
                                 <FiGithub size={20} />
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="https://linkedin.com/in/abdi-sileshi-56710a2a6"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -146,14 +146,14 @@ export default function Hero() {
                                 aria-label="LinkedIn"
                             >
                                 <FiLinkedin size={20} />
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="mailto:abdisileshi123@gmail.com"
                                 className="p-3 rounded-xl border border-border text-muted-foreground hover:text-foreground hover:border-accent/40 hover:bg-accent/5 transition-all duration-300"
                                 aria-label="Email"
                             >
                                 <FiMail size={20} />
-                            </a>
+                            </Link>
                         </motion.div>
                     </motion.div>
 

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 import { FiSend, FiMail, FiMapPin, FiPhone, FiGithub, FiLinkedin } from "react-icons/fi";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -111,9 +112,9 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <p className="text-sm text-muted-foreground/70 font-medium mb-1">Email Me At</p>
-                                            <a href={`mailto:${contactDetails.email}`} className="text-foreground hover:text-accent font-medium transition-colors break-all">
+                                            <Link href={`mailto:${contactDetails.email}`} className="text-foreground hover:text-accent font-medium transition-colors break-all">
                                                 {contactDetails.email}
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
 
@@ -123,9 +124,9 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <p className="text-sm text-muted-foreground/70 font-medium mb-1">Call Me At</p>
-                                            <a href={`tel:${contactDetails.phone}`} className="text-foreground hover:text-accent font-medium transition-colors">
+                                            <Link href={`tel:${contactDetails.phone}`} className="text-foreground hover:text-accent font-medium transition-colors">
                                                 {contactDetails.phone}
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
 

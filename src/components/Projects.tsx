@@ -168,22 +168,22 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 {/* Links */}
                 <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-border/50">
                     {project.live && (
-                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-xl hover:bg-accent-dark transition-colors border border-transparent">
+                        <Link href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-xl hover:bg-accent-dark transition-colors border border-transparent">
                             <FiExternalLink />
                             Live Demo
-                        </a>
+                        </Link>
                     )}
                     {project.github && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-hover text-foreground text-sm font-semibold rounded-xl hover:bg-accent/10 hover:text-accent transition-colors border border-border">
+                        <Link href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-hover text-foreground text-sm font-semibold rounded-xl hover:bg-accent/10 hover:text-accent transition-colors border border-border">
                             <FiGithub />
                             Code
-                        </a>
+                        </Link>
                     )}
                     {project.backend && (
-                        <a href={project.backend} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-hover text-foreground text-sm font-semibold rounded-xl hover:bg-accent/10 hover:text-accent transition-colors border border-border">
+                        <Link href={project.backend} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-hover text-foreground text-sm font-semibold rounded-xl hover:bg-accent/10 hover:text-accent transition-colors border border-border">
                             <FiGithub />
                             Backend API
-                        </a>
+                        </Link>
                     )}
                 </div>
             </div>

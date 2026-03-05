@@ -35,7 +35,7 @@ export default function Footer() {
                             and user-centric digital experiences using modern web technologies.
                         </p>
                         <div className="flex items-center gap-4 pt-2">
-                            <a
+                            <Link
                                 href="https://github.com/Ketoransile"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -43,8 +43,8 @@ export default function Footer() {
                                 aria-label="GitHub"
                             >
                                 <FiGithub size={18} />
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="https://linkedin.com/in/abdi-sileshi-56710a2a6"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -52,14 +52,14 @@ export default function Footer() {
                                 aria-label="LinkedIn"
                             >
                                 <FiLinkedin size={18} />
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="mailto:abdisileshi123@gmail.com"
                                 className="w-10 h-10 rounded-full bg-surface border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-accent hover:bg-accent/10 transition-all duration-300"
                                 aria-label="Email"
                             >
                                 <FiMail size={18} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
