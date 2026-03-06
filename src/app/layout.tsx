@@ -37,6 +37,12 @@ export const metadata: Metadata = {
     "Abdi Sileshi Worku",
   ],
   authors: [{ name: "Abdi Sileshi Worku" }],
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "Abdi Sileshi Worku | Full-Stack Software Engineer",
     description:

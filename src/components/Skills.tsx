@@ -58,7 +58,7 @@ function SkillPill({
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.3, duration: 1.5 }}
+            transition={{ delay: index * 0.06, duration: 0.4 }}
             className={`group flex items-center gap-3 px-4 py-3 rounded-xl bg-surface border border-border ${hoverBorder} ${hoverShadow} transition-all duration-300 hover:-translate-y-1 cursor-default`}
         >
             <div className="relative w-7 h-7 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 dark:invert-0">
