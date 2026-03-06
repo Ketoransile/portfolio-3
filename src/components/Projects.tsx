@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -122,7 +123,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     return (
         <div className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} bg-surface border border-border hover:border-accent/30 transition-colors duration-500 rounded-3xl overflow-hidden shine-effect`}>
             {/* Image Section - Alternating sides on Desktop */}
-            <div className={`relative w-full lg:w-2/5 aspect-[4/3] lg:aspect-auto border-b lg:border-b-0 ${index % 2 !== 0 ? 'lg:border-l' : 'lg:border-r'} border-border/50`}>
+            <div className={`relative w-full lg:w-2/5 aspect-[4/3] lg:aspect-auto overflow-hidden border-b lg:border-b-0 ${index % 2 !== 0 ? 'lg:border-l' : 'lg:border-r'} border-border/50`}>
                 <Image
                     src={project.img}
                     alt={project.title}
@@ -140,7 +141,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             </div>
 
             {/* Content Section - Right side on Desktop */}
-            <div className="flex flex-col flex-1 p-6 sm:p-8 lg:p-10 justify-between">
+            <div className="relative z-10 flex flex-col flex-1 p-6 sm:p-8 lg:p-10 justify-between">
                 <div>
                     <h3 className="font-display text-2xl font-bold text-foreground mb-4">
                         {project.title}
