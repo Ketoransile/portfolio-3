@@ -16,11 +16,11 @@ export default function Home() {
         Components handle their own scroll animations. 
       */}
       <Navbar />
-      <div className="w-full max-w-[90rem] mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div className="w-full max-w-[120rem] mx-auto px-4 sm:px-8 lg:px-20 xl:px-32 2xl:px-40">
         <Hero />
 
         {/* Decorative divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent max-w-6xl mx-auto" />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent max-w-[90rem] mx-auto" />
 
         <About />
         <Projects />

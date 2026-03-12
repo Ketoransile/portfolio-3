@@ -49,12 +49,12 @@ export default function Navbar() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className={`fixed z-50 transition-all duration-500 ${scrolled
-                    ? "w-full top-0 left-0 md:w-[92%] md:max-w-3xl md:top-4 md:left-1/2 md:-translate-x-1/2"
-                    : "w-full top-0 left-0 md:w-[95%] md:max-w-4xl md:top-4 md:left-1/2 md:-translate-x-1/2"
+                    ? "w-full top-0 left-0 md:w-[92%] md:max-w-4xl md:top-4 md:left-1/2 md:-translate-x-1/2"
+                    : "w-full top-0 left-0 md:w-[95%] md:max-w-5xl md:top-4 md:left-1/2 md:-translate-x-1/2"
                     }`}
             >
                 <div
-                    className={`bg-white/60 dark:bg-black/60 backdrop-blur-2xl rounded-none border-b border-border/50 md:border-none md:rounded-xl px-4 md:px-6 py-3 flex items-center justify-between transition-all duration-500 ${scrolled ? "shadow-md shadow-accent/5 dark:shadow-none" : ""
+                    className={`bg-white/40 dark:bg-[#0a0a0a]/40 backdrop-blur-xl rounded-none border-b border-gray-200/50 dark:border-white/10 md:border md:border-gray-200/50 dark:md:border-white/10 md:rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between transition-all duration-500 ${scrolled ? "shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(255,255,255,0.04)] bg-white/60 dark:bg-[#0a0a0a]/60 border-gray-200/80 dark:border-white/20" : ""
                         }`}
                 >
                     {/* Logo */}

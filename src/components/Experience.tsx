@@ -59,11 +59,14 @@ export default function Experience() {
                     <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
                         Work <span className="gradient-text">Experience</span>
                     </h2>
+                    <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
+                        A timeline of my professional work experience, internships, and projects where I contributed to building scalable systems.
+                    </p>
                 </motion.div>
 
-                <div className="max-w-4xl mx-auto">
+                <div className="w-full">
                     {/* Experience Column */}
-                    <div>
+                    <div className="sm:ml-12 lg:ml-16">
                         <motion.h3
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +74,7 @@ export default function Experience() {
                             className="text-xl font-display font-bold text-foreground mb-8 flex items-center justify-center sm:justify-start gap-3"
                         >
                             <span className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent">💼</span>
-                            Work Experience
+                            Professional History
                         </motion.h3>
 
                         <div className="space-y-6">
@@ -84,8 +87,8 @@ export default function Experience() {
                                     transition={{ delay: i * 0.2, duration: 0.5 }}
                                     className="relative"
                                 >
-                                    <div className="hidden sm:block absolute left-[-41px] top-6 w-5 h-5 rounded-full bg-surface border-4 border-accent z-10" />
-                                    <div className="hidden sm:block absolute left-[-32px] top-10 bottom-[-40px] w-0.5 bg-border z-0" />
+                                    <div className="hidden sm:block absolute left-[-41px] top-0 mt-1.5 w-5 h-5 rounded-full bg-surface border-4 border-accent z-10" />
+                                    <div className="hidden sm:block absolute left-[-32px] top-0 bottom-[-24px] w-0.5 bg-border z-0" />
 
                                     <div className="group p-6 rounded-2xl bg-surface border border-border hover:border-accent/30 transition-all duration-300 glow-card hover:-translate-y-1">
                                         <div className="flex flex-col sm:flex-row gap-4 sm:items-start mb-4">
