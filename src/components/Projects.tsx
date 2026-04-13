@@ -221,10 +221,17 @@ export default function Projects() {
                     </p>
                 </motion.div>
 
-                {/* Project grid - Clean layout */}
                 <div className="flex flex-col gap-12 sm:gap-16">
                     {projects.map((project, i) => (
-                        <ProjectCard key={project.title} project={project} index={i} />
+                        <motion.div
+                            key={project.title}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-80px" }}
+                            transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
+                        >
+                            <ProjectCard project={project} index={i} />
+                        </motion.div>
                     ))}
                 </div>
             </div>

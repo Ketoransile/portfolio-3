@@ -22,12 +22,14 @@ const techSkills = [
     { title: "Expo", icon: "/techIcons/expo.svg" },
     { title: "Python", icon: "/techIcons/python.svg" },
     { title: "C++", icon: "/techIcons/cpp.svg" },
+    { title: "OpenAI", icon: "/techIcons/openai.svg" },
 ];
 
 const tools = [
     { title: "Figma", icon: "/toolsImage/figma.svg" },
     { title: "Git", icon: "/toolsImage/git.svg" },
     { title: "GitHub", icon: "/toolsImage/github.svg" },
+    { title: "Docker", icon: "/toolsImage/docker.svg" },
     { title: "Netlify", icon: "/toolsImage/netlify.svg" },
     { title: "npm", icon: "/toolsImage/npm.svg" },
     { title: "Vercel", icon: "/toolsImage/vercel.svg" },

@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from "react-icons/fi";
 
 const navLinks = [
@@ -19,7 +22,13 @@ export default function Footer() {
             <div className="w-full max-w-[90rem] mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand */}
-                    <div className="md:col-span-2 space-y-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5 }}
+                        className="md:col-span-2 space-y-4"
+                    >
                         <Link href="#home" className="flex items-center gap-2 group w-max">
                             <div className="w-8 h-8 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                                 <span className="text-accent font-display font-bold text-sm">
@@ -61,10 +70,16 @@ export default function Footer() {
                                 <FiMail size={18} />
                             </Link>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Quick Links */}
-                    <div className="space-y-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="space-y-4"
+                    >
                         <h4 className="font-display font-semibold text-foreground">Quick Links</h4>
                         <ul className="space-y-2">
                             {navLinks.map((link) => (
@@ -78,10 +93,16 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Info */}
-                    <div className="space-y-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="space-y-4"
+                    >
                         <h4 className="font-display font-semibold text-foreground">Contact</h4>
                         <ul className="space-y-3">
                             <li className="text-sm text-muted-foreground flex items-start gap-3">
@@ -99,11 +120,17 @@ export default function Footer() {
                         >
                             Start a conversation &rarr;
                         </Link>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Bottom bar */}
-                <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4"
+                >
                     <p className="text-xs text-muted-foreground font-mono">
                         &copy; {new Date().getFullYear()} Abdi Sileshi Worku. All rights reserved.
                     </p>
@@ -117,7 +144,7 @@ export default function Footer() {
                             <FiArrowUp size={14} className="group-hover:-translate-y-0.5 transition-transform" />
                         </div>
                     </Link>
-                </div>
+                </motion.div>
             </div>
         </footer>
     );

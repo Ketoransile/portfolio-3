@@ -137,7 +137,14 @@ export default function Education() {
                                 </h4>
                                 <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-y-8 gap-x-6">
                                     {courseCategories.map((cat, i) => (
-                                        <div key={i} className="group/cat">
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, y: 15 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true, margin: "-30px" }}
+                                            transition={{ delay: 0.1 + i * 0.08, duration: 0.4 }}
+                                            className="group/cat"
+                                        >
                                             <h5 className="text-accent text-sm font-semibold mb-3 tracking-wide">{cat.category}</h5>
                                             <ul className="space-y-2">
                                                 {cat.courses.map((course, j) => (
@@ -147,7 +154,7 @@ export default function Education() {
                                                     </li>
                                                 ))}
                                             </ul>
-                                        </div>
+                                        </motion.div>
                                     ))}
                                 </div>
                             </div>
