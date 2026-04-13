@@ -193,16 +193,6 @@ export default function Hero() {
                                 </div>
                             </div>
 
-                            {/* Floating badge — outside the image so it doesn't cover the head */}
-                            <div className="absolute -right-4 -top-3 z-20 rounded-2xl border border-border/70 bg-background/90 px-4 py-2.5 shadow-xl backdrop-blur-md">
-                                <div className="flex items-center gap-2">
-                                    <span className="text-base">🤖</span>
-                                    <div>
-                                        <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Focus</p>
-                                        <p className="text-sm font-semibold text-foreground">AI + Full-Stack</p>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </motion.div>
