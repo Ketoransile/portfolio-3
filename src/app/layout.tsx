@@ -23,19 +23,34 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abdi Sileshi Worku | Full-Stack Software Engineer",
+  metadataBase: new URL("https://www.abdisileshi.dev"),
+  title: {
+    default: "Abdi Sileshi Worku | Full-Stack Software Engineer",
+    template: "%s | Abdi Sileshi Worku"
+  },
   description:
-    "Portfolio of Abdi Sileshi Worku — a Full-Stack Software Engineer specializing in Next.js, React, Node.js, and modern web technologies. Building scalable, beautiful digital experiences.",
+    "Portfolio of Abdi Sileshi Worku (Abdi Sileshi) — a Full-Stack Software Engineer specializing in Next.js, React, Node.js, and modern web technologies. Building scalable, beautiful digital experiences.",
   keywords: [
+    "Abdi Sileshi",
+    "Abdi Sileshi Worku",
+    "Abdi Sileshi Portfolio",
+    "Abdi Sileshi Software Engineer",
+    "Abdi Sileshi Developer",
     "Full-Stack Developer",
     "Software Engineer",
     "Next.js",
     "React",
     "Node.js",
     "Portfolio",
-    "Abdi Sileshi Worku",
   ],
-  authors: [{ name: "Abdi Sileshi Worku" }],
+  authors: [{ name: "Abdi Sileshi Worku", url: "https://www.abdisileshi.dev" }],
+  creator: "Abdi Sileshi Worku",
+  publisher: "Abdi Sileshi Worku",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -45,8 +60,40 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Abdi Sileshi Worku | Full-Stack Software Engineer",
     description:
-      "Building scalable, beautiful digital experiences with Next.js, React, and Node.js.",
+      "Portfolio of Abdi Sileshi Worku (Abdi Sileshi) — a Full-Stack Software Engineer building scalable digital experiences.",
+    url: "https://www.abdisileshi.dev",
+    siteName: "Abdi Sileshi Worku Portfolio",
+    images: [
+      {
+        url: "/hero-profile.png",
+        width: 800,
+        height: 600,
+        alt: "Abdi Sileshi Worku",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdi Sileshi Worku | Full-Stack Software Engineer",
+    description:
+      "Portfolio of Abdi Sileshi Worku — a Full-Stack Software Engineer building scalable digital experiences.",
+    images: ["/hero-profile.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://www.abdisileshi.dev",
   },
 };
 

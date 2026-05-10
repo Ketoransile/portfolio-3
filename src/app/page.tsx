@@ -7,10 +7,33 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Education from "@/components/Education";
+import Script from "next/script";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Abdi Sileshi Worku",
+    alternateName: "Abdi Sileshi",
+    url: "https://www.abdisileshi.dev",
+    jobTitle: "Full-Stack Software Engineer",
+    sameAs: [
+      "https://linkedin.com/in/abdi-sileshi-56710a2a6",
+      "https://github.com/Ketoransile"
+    ],
+    worksFor: {
+      "@type": "Organization",
+      name: "Freelance"
+    }
+  };
+
   return (
     <main className="min-h-screen overflow-x-hidden selection:bg-accent/40 selection:text-white">
+      <Script
+        id="person-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* 
         Single-page layout orchestrator.
         Sidebar nav on desktop, top bar on mobile.
