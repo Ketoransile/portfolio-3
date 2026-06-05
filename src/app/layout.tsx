@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.abdisileshi.dev"),
   title: {
     default: "Abdi Sileshi Worku | Full-Stack Software Engineer",
-    template: "%s | Abdi Sileshi Worku"
+    template: "%s | Abdi Sileshi Worku",
   },
   description:
-    "Portfolio of Abdi Sileshi Worku (Abdi Sileshi) — a Full-Stack Software Engineer specializing in Next.js, React, Node.js, and modern web technologies. Building scalable, beautiful digital experiences.",
+    "Portfolio of Abdi Sileshi Worku, a Full-Stack Software Engineer specializing in Next.js, React, Node.js, AI tools, and modern web technologies.",
   keywords: [
     "Abdi Sileshi",
     "Abdi Sileshi Worku",
@@ -52,15 +52,13 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: "/icon.svg",
   },
   openGraph: {
     title: "Abdi Sileshi Worku | Full-Stack Software Engineer",
     description:
-      "Portfolio of Abdi Sileshi Worku (Abdi Sileshi) — a Full-Stack Software Engineer building scalable digital experiences.",
+      "Portfolio of Abdi Sileshi Worku, a Full-Stack Software Engineer building full-stack web applications and AI-powered tools.",
     url: "https://www.abdisileshi.dev",
     siteName: "Abdi Sileshi Worku Portfolio",
     images: [
@@ -78,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abdi Sileshi Worku | Full-Stack Software Engineer",
     description:
-      "Portfolio of Abdi Sileshi Worku — a Full-Stack Software Engineer building scalable digital experiences.",
+      "Portfolio of Abdi Sileshi Worku, a Full-Stack Software Engineer building full-stack web applications and AI-powered tools.",
     images: ["/hero-profile.png"],
   },
   robots: {

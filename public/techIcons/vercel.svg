@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="vercel-title">
+  <title id="vercel-title">Vercel</title>
+  <rect width="128" height="128" rx="28" fill="#000"/>
+  <path fill="#fff" d="M64 26 112 109H16L64 26z"/>
+</svg>
