@@ -5,7 +5,7 @@ import { FiAward, FiBookOpen, FiMapPin } from "react-icons/fi";
 const education = {
   degree: "B.Eng. Software Engineering",
   school: "Adama Science and Technology University (ASTU)",
-  year: "Expected July 2026",
+  year: "May 2022 - July 2026",
   location: "Adama, Ethiopia",
   cgpa: "4.0",
 };
@@ -97,7 +97,7 @@ export default function Education() {
                 </div>
                 <div className="rounded-xl border border-border bg-surface p-4">
                   <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                    Graduation
+                    University Period
                   </div>
                   <div className="mt-1 text-sm font-semibold text-foreground">
                     {education.year}

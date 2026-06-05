@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,14 +11,26 @@ import {
   FiMail,
 } from "react-icons/fi";
 
-const strengths = [
-  "Full-stack web apps",
-  "AI product features",
-  "Clean interfaces",
-  "Backend APIs",
+const roles = [
+  "Full-Stack Developer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Problem Solver",
 ];
 
 export default function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
+  const portraitImages = ["/hero-profile.png", "/my_second_image.png"];
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setRoleIndex((current) => (current + 1) % roles.length);
+    }, 2800);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="home"
@@ -26,81 +39,60 @@ export default function Hero() {
       <div className="relative z-10 w-full">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.75fr]">
           <div className="order-2 text-center lg:order-1 lg:text-left">
-            <div className="mb-5 inline-flex rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-muted-foreground">
-              Graduating Software Engineer
-            </div>
-
-            <h1 className="font-display text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-              Abdi Sileshi
-            </h1>
-
-            <h2 className="mt-4 max-w-3xl font-display text-2xl font-semibold leading-tight text-foreground sm:text-3xl lg:text-4xl">
-              I build full-stack web applications and practical AI-powered tools.
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
-              I focus on simple, useful products with clear interfaces, reliable
-              backend logic, and modern technologies like Next.js, TypeScript,
-              Node.js, PostgreSQL, MongoDB, and OpenAI.
+            <p className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-none">
+              Hi, I&apos;m
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center gap-2 lg:justify-start">
-              {strengths.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-md border border-border bg-surface px-3 py-1.5 text-sm font-medium text-muted-foreground"
-                >
-                  {item}
-                </span>
-              ))}
+            <h1 className="mt-2 font-display text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-[5.8rem] lg:leading-[0.95]">
+              <span className="gradient-text">Abdi Sileshi</span>
+            </h1>
+
+            <h2 className="mt-6 font-display text-2xl font-semibold text-foreground sm:text-3xl lg:text-4xl">
+              Software Engineer
+            </h2>
+
+            <div className="mt-4 flex items-center justify-center gap-3 lg:justify-start">
+              <span className="h-2 w-2 rounded-full bg-accent" />
+              <p className="text-base font-medium text-muted-foreground sm:text-lg">
+                {roles[roleIndex]}
+              </p>
             </div>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              <div className="rounded-xl border border-border bg-surface p-4 text-center lg:text-left">
-                <div className="font-display text-2xl font-bold text-foreground">4.0</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                  CGPA
-                </div>
-              </div>
-              <div className="rounded-xl border border-border bg-surface p-4 text-center lg:text-left">
-                <div className="font-display text-2xl font-bold text-foreground">15+</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                  Projects
-                </div>
-              </div>
-              <div className="rounded-xl border border-border bg-surface p-4 text-center lg:text-left">
-                <div className="font-display text-2xl font-bold text-foreground">2026</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                  Graduation
-                </div>
-              </div>
-            </div>
+            <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
+              I craft{" "}
+              <span className="font-semibold text-foreground">
+                robust and beautiful digital experiences
+              </span>
+              . I focus on turning complex, real-world problems into clear,
+              scalable products with strong frontend structure and reliable
+              backend systems.
+            </p>
 
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <Link
                 href="#projects"
-                className="group inline-flex h-12 items-center gap-3 rounded-xl bg-accent px-7 font-semibold text-white transition-colors hover:bg-accent-dark"
+                className="group inline-flex h-14 items-center gap-3 rounded-2xl bg-accent px-8 font-semibold text-white shadow-[0_12px_30px_rgba(99,102,241,0.24)] transition-colors hover:bg-accent-dark"
               >
-                View Projects
+                View My Work
                 <FiArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="https://drive.google.com/file/d/1bqmJFrNjhmys262Ear6ZuCF3cAIsuHzm/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-3 rounded-xl border border-border px-7 font-semibold text-muted-foreground transition-colors hover:border-accent/40 hover:text-foreground"
+                className="inline-flex h-14 items-center gap-3 rounded-2xl border border-border px-8 font-semibold text-muted-foreground transition-colors hover:border-accent/40 hover:text-foreground"
               >
                 <FiExternalLink className="h-4 w-4" />
                 View Resume
               </Link>
             </div>
 
-            <div className="mt-7 flex items-center justify-center gap-3 lg:justify-start">
+            <div className="mt-9 flex items-center justify-center gap-5 lg:justify-start">
               <Link
                 href="https://github.com/Ketoransile"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-xl border border-border text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-border text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent"
                 aria-label="GitHub"
               >
                 <FiGithub className="h-5 w-5" />
@@ -109,14 +101,14 @@ export default function Hero() {
                 href="https://linkedin.com/in/abdi-sileshi-56710a2a6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-xl border border-border text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-border text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent"
                 aria-label="LinkedIn"
               >
                 <FiLinkedin className="h-5 w-5" />
               </Link>
               <Link
                 href="mailto:abdisileshi123@gmail.com"
-                className="flex h-11 w-11 items-center justify-center rounded-xl border border-border text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-border text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent"
                 aria-label="Email"
               >
                 <FiMail className="h-5 w-5" />
@@ -129,9 +121,17 @@ export default function Hero() {
               <div className="absolute inset-0 -rotate-3 rounded-[2rem] border border-accent/15 bg-accent/5" />
               <div className="absolute inset-0 rotate-2 rounded-[2rem] border border-border bg-background" />
 
-              <div className="relative h-full overflow-hidden rounded-[2rem] border border-border bg-surface shadow-[0_20px_60px_rgba(17,24,39,0.14)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+              <button
+                type="button"
+                onClick={() =>
+                  setImageIndex((current) => (current + 1) % portraitImages.length)
+                }
+                className="relative h-full w-full overflow-hidden rounded-[2rem] border border-border bg-surface text-left shadow-[0_20px_60px_rgba(17,24,39,0.14)] transition-transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+                aria-label="Switch profile image"
+              >
                 <Image
-                  src="/hero-profile.png"
+                  key={portraitImages[imageIndex]}
+                  src={portraitImages[imageIndex]}
                   alt="Abdi Sileshi Worku"
                   fill
                   priority
@@ -145,9 +145,12 @@ export default function Hero() {
                     <p className="mt-1 text-sm font-medium">
                       Full-stack, AI, and product-focused development
                     </p>
+                    <p className="mt-2 text-[11px] font-medium text-white/70">
+                      Click image to switch portrait
+                    </p>
                   </div>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>

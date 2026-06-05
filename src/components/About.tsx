@@ -27,7 +27,7 @@ const highlights = [
 
 const stats = [
   { value: "15+", label: "Projects Built" },
-  { value: "3+", label: "Years Learning & Building" },
+  { value: "3+", label: "Years Building" },
   { value: "4.0", label: "CGPA" },
 ];
 
