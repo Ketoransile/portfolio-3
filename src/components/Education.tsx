@@ -7,7 +7,7 @@ const education = {
   school: "Adama Science and Technology University (ASTU)",
   year: "May 2022 - July 2026",
   location: "Adama, Ethiopia",
-  cgpa: "4.0",
+  cgpa: "3.89",
 };
 
 const courseCategories = [
