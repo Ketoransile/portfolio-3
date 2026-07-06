@@ -28,36 +28,8 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    title: "Enterprise GraphRAG",
-    type: "AI Knowledge Platform",
-    role: "Full-stack AI engineer",
-    focus: "RAG, RBAC, graph search, analytics",
-    outcome:
-      "A secure document intelligence platform for teams that need to search, chat with, and understand internal knowledge.",
-    description:
-      "I built a GraphRAG workflow with document ingestion, role-based access, hybrid retrieval, streaming AI chat, analytics, and knowledge graph exploration.",
-    img: "/projectsPictures/graph-rag.png",
-    tech: [
-      { name: "Next.js", icon: "/techIcons/next.svg" },
-      { name: "TypeScript", icon: "/techIcons/typescript.svg" },
-      { name: "Tailwind", icon: "/techIcons/tailwind.svg" },
-      { name: "FastAPI", icon: "/techIcons/fastapi.svg" },
-      { name: "PostgreSQL", icon: "/techIcons/postgresql.svg" },
-      { name: "Neo4j", icon: "/techIcons/neo4j.svg" },
-      { name: "Redis", icon: "/techIcons/redis.svg" },
-      { name: "OpenAI", icon: "/techIcons/openai.svg" },
-      { name: "Railway", icon: "/techIcons/railway.svg" },
-      { name: "Vercel", icon: "/techIcons/vercel.svg" },
-    ],
-    highlights: [
-      "Hybrid retrieval across files, vectors, and graph relationships",
-      "Role-based permissions for private team knowledge",
-      "Streaming chat, analytics, and graph exploration views",
-    ],
-    live: "https://enterprise-graph-rag.vercel.app/",
-    github: "https://github.com/Ketoransile/Enterprise-Graph-Rag",
-  },
+  
+  
   {
     title: "Reveal - AI Conversion Analyzer",
     type: "AI SaaS Product",

@@ -20,8 +20,6 @@ const roles = [
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
-  const [imageIndex, setImageIndex] = useState(0);
-  const portraitImages = ["/hero-profile.png", "/my_second_image.png"];
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -121,17 +119,9 @@ export default function Hero() {
               <div className="absolute inset-0 -rotate-3 rounded-[2rem] border border-accent/15 bg-accent/5" />
               <div className="absolute inset-0 rotate-2 rounded-[2rem] border border-border bg-background" />
 
-              <button
-                type="button"
-                onClick={() =>
-                  setImageIndex((current) => (current + 1) % portraitImages.length)
-                }
-                className="relative h-full w-full overflow-hidden rounded-[2rem] border border-border bg-surface text-left shadow-[0_20px_60px_rgba(17,24,39,0.14)] transition-transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
-                aria-label="Switch profile image"
-              >
+              <div className="relative h-full w-full overflow-hidden rounded-[2rem] border border-border bg-surface shadow-[0_20px_60px_rgba(17,24,39,0.14)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
                 <Image
-                  key={portraitImages[imageIndex]}
-                  src={portraitImages[imageIndex]}
+                  src="/profile.png"
                   alt="Abdi Sileshi Worku"
                   fill
                   priority
@@ -145,12 +135,9 @@ export default function Hero() {
                     <p className="mt-1 text-sm font-medium">
                       Full-stack, AI, and product-focused development
                     </p>
-                    <p className="mt-2 text-[11px] font-medium text-white/70">
-                      Click image to switch portrait
-                    </p>
                   </div>
                 </div>
-              </button>
+              </div>
             </div>
           </div>
         </div>
