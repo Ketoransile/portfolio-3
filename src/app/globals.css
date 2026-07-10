@@ -75,7 +75,6 @@ body {
 }
 
 @keyframes gradientShift {
-
   0%,
   100% {
     background-position: 0% 50%;
@@ -84,6 +83,13 @@ body {
   50% {
     background-position: 100% 50%;
   }
+}
+
+.hero-portrait {
+  object-fit: cover;
+  object-position: center 24%;
+  transform: scale(2.35);
+  transform-origin: center 22%;
 }
 
 /* Glow effects */

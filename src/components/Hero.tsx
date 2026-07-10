@@ -35,7 +35,7 @@ export default function Hero() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden pb-16 pt-24 lg:pt-16"
     >
       <div className="relative z-10 w-full">
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.75fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="order-2 text-center lg:order-1 lg:text-left">
             <p className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-none">
               Hi, I&apos;m
@@ -114,18 +114,18 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-            <div className="relative h-[20rem] w-[17rem] sm:h-[25rem] sm:w-[21rem] lg:h-[30rem] lg:w-[24rem]">
+          <div className="order-1 w-full lg:order-2">
+            <div className="relative mx-auto aspect-square w-full max-w-[18rem] sm:max-w-[22rem] lg:mx-0 lg:max-w-none">
               <div className="absolute inset-0 -rotate-3 rounded-[2rem] border border-accent/15 bg-accent/5" />
               <div className="absolute inset-0 rotate-2 rounded-[2rem] border border-border bg-background" />
 
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] border border-border bg-surface shadow-[0_20px_60px_rgba(17,24,39,0.14)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
                 <Image
-                  src="/profile.png"
+                  src="/my_second_image.png"
                   alt="Abdi Sileshi Worku"
                   fill
                   priority
-                  className="object-cover object-top"
+                  className="hero-portrait"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                   <div className="rounded-xl border border-white/15 bg-black/45 px-4 py-3 text-white backdrop-blur-md">
