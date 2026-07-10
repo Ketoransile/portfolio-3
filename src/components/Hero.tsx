@@ -115,7 +115,7 @@ export default function Hero() {
           </div>
 
           <div className="order-1 w-full lg:order-2">
-            <div className="relative mx-auto aspect-square w-full max-w-[18rem] sm:max-w-[22rem] lg:mx-0 lg:max-w-none">
+            <div className="relative mx-auto w-full max-w-[18rem] sm:max-w-[22rem] lg:ml-auto lg:mr-0 lg:max-w-[28rem]" style={{ aspectRatio: "896 / 1111" }}>
               <div className="absolute inset-0 -rotate-3 rounded-[2rem] border border-accent/15 bg-accent/5" />
               <div className="absolute inset-0 rotate-2 rounded-[2rem] border border-border bg-background" />
 
@@ -125,7 +125,7 @@ export default function Hero() {
                   alt="Abdi Sileshi Worku"
                   fill
                   priority
-                  className="hero-portrait"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                   <div className="rounded-xl border border-white/15 bg-black/45 px-4 py-3 text-white backdrop-blur-md">

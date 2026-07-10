@@ -86,8 +86,10 @@ body {
 }
 
 .hero-portrait {
-  object-fit: contain;
-  object-position: center center;
+  object-fit: cover;
+  object-position: center 24%;
+  transform: scale(2.35);
+  transform-origin: center 22%;
 }
 
 /* Glow effects */
