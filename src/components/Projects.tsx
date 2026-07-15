@@ -28,8 +28,40 @@ interface Project {
 }
 
 const projects: Project[] = [
-  
-  
+
+  {
+    title: "Enterprise Graph RAG",
+    type: "Full-Stack AI Platform",
+    role: "Full-stack engineer",
+    focus: "Graph-based RAG, multi-tenant RBAC, knowledge retrieval",
+    outcome:
+      "A multi-tenant enterprise platform that ingests documents, builds a knowledge graph, and lets users query it through a conversational AI interface with role-based access control.",
+    description:
+      "Enterprise Graph RAG combines vector search, BM25 keyword search, and Reciprocal Rank Fusion to retrieve the most relevant document chunks. It builds a Neo4j knowledge graph from uploaded documents, enforces strict RBAC security filtering before any data reaches the LLM, and provides an interactive graph explorer for visualizing entity relationships.",
+    img: "/projectsPictures/enterprise-graph-rag.png",
+    tech: [
+      { name: "Next.js", icon: "/techIcons/next.svg" },
+      { name: "TypeScript", icon: "/techIcons/typescript.svg" },
+      { name: "Tailwind", icon: "/techIcons/tailwind.svg" },
+      { name: "Python", icon: "/techIcons/python.svg" },
+      { name: "FastAPI", icon: "/techIcons/fastapi.svg" },
+      { name: "PostgreSQL", icon: "/techIcons/postgresql.svg" },
+      { name: "Neo4j", icon: "/techIcons/neo4j.svg" },
+      { name: "Redis", icon: "/techIcons/redis.svg" },
+      { name: "OpenAI", icon: "/techIcons/openai.svg" },
+      { name: "Docker", icon: "/techIcons/docker.svg" },
+    ],
+    highlights: [
+      "Hybrid retrieval pipeline with vector search, BM25, and Reciprocal Rank Fusion",
+      "Interactive knowledge graph explorer with entity filtering and relationship inspection",
+      "Multi-tenant architecture with strict RBAC security filtering across 4 clearance levels",
+      "Real-time streaming chat with document citations and conversation history",
+      "Async document ingestion via Celery workers with PDF and DOCX parsing",
+    ],
+    live: "https://enterprise-graph-rag.vercel.app/",
+    github: "https://github.com/Ketoransile/Enterprise-Graph-Rag",
+  },
+
   {
     title: "Reveal - AI Conversion Analyzer",
     type: "AI SaaS Product",
@@ -324,18 +356,16 @@ export default function Projects() {
                     type="button"
                     aria-pressed={isActive}
                     onClick={() => setActiveIndex(index)}
-                    className={`group flex w-full items-center gap-3 px-3 py-3 text-left transition-colors ${
-                      isActive
-                        ? "bg-accent/10 text-foreground"
-                        : "bg-surface text-muted-foreground hover:bg-surface-hover"
-                    }`}
+                    className={`group flex w-full items-center gap-3 px-3 py-3 text-left transition-colors ${isActive
+                      ? "bg-accent/10 text-foreground"
+                      : "bg-surface text-muted-foreground hover:bg-surface-hover"
+                      }`}
                   >
                     <span
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-md border text-xs font-bold ${
-                        isActive
-                          ? "border-accent/40 bg-accent text-white"
-                          : "border-border bg-background text-muted-foreground"
-                      }`}
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-md border text-xs font-bold ${isActive
+                        ? "border-accent/40 bg-accent text-white"
+                        : "border-border bg-background text-muted-foreground"
+                        }`}
                     >
                       {String(index + 1).padStart(2, "0")}
                     </span>
@@ -360,11 +390,10 @@ export default function Projects() {
                     </span>
 
                     <FiArrowUpRight
-                      className={`h-4 w-4 shrink-0 transition-transform ${
-                        isActive
-                          ? "text-accent"
-                          : "text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
-                      }`}
+                      className={`h-4 w-4 shrink-0 transition-transform ${isActive
+                        ? "text-accent"
+                        : "text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                        }`}
                     />
                   </button>
                 );
