@@ -75,7 +75,7 @@ export default function Hero() {
                 <FiArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="https://drive.google.com/file/d/1qW4lVPT2RS7tgC9OD3njQBVMJjva0EnY/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ewHEq0WvVtWYGblq4clqaiOGmVV_u06k/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-14 items-center gap-3 rounded-2xl border border-border px-8 font-semibold text-muted-foreground transition-colors hover:border-accent/40 hover:text-foreground"
