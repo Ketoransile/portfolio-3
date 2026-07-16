@@ -28,39 +28,38 @@ interface Project {
 }
 
 const projects: Project[] = [
-
-  {
-    title: "Enterprise Graph RAG",
-    type: "Full-Stack AI Platform",
-    role: "Full-stack engineer",
-    focus: "Graph-based RAG, multi-tenant RBAC, knowledge retrieval",
-    outcome:
-      "A multi-tenant enterprise platform that ingests documents, builds a knowledge graph, and lets users query it through a conversational AI interface with role-based access control.",
-    description:
-      "Enterprise Graph RAG combines vector search, BM25 keyword search, and Reciprocal Rank Fusion to retrieve the most relevant document chunks. It builds a Neo4j knowledge graph from uploaded documents, enforces strict RBAC security filtering before any data reaches the LLM, and provides an interactive graph explorer for visualizing entity relationships.",
-    img: "/projectsPictures/enterprise-graph-rag.png",
-    tech: [
-      { name: "Next.js", icon: "/techIcons/next.svg" },
-      { name: "TypeScript", icon: "/techIcons/typescript.svg" },
-      { name: "Tailwind", icon: "/techIcons/tailwind.svg" },
-      { name: "Python", icon: "/techIcons/python.svg" },
-      { name: "FastAPI", icon: "/techIcons/fastapi.svg" },
-      { name: "PostgreSQL", icon: "/techIcons/postgresql.svg" },
-      { name: "Neo4j", icon: "/techIcons/neo4j.svg" },
-      { name: "Redis", icon: "/techIcons/redis.svg" },
-      { name: "OpenAI", icon: "/techIcons/openai.svg" },
-      { name: "Docker", icon: "/techIcons/docker.svg" },
-    ],
-    highlights: [
-      "Hybrid retrieval pipeline with vector search, BM25, and Reciprocal Rank Fusion",
-      "Interactive knowledge graph explorer with entity filtering and relationship inspection",
-      "Multi-tenant architecture with strict RBAC security filtering across 4 clearance levels",
-      "Real-time streaming chat with document citations and conversation history",
-      "Async document ingestion via Celery workers with PDF and DOCX parsing",
-    ],
-    live: "https://enterprise-graph-rag.vercel.app/",
-    github: "https://github.com/Ketoransile/Enterprise-Graph-Rag",
-  },
+  // {
+  //   title: "Enterprise Graph RAG",
+  //   type: "Full-Stack AI Platform",
+  //   role: "Full-stack engineer",
+  //   focus: "Graph-based RAG, multi-tenant RBAC, knowledge retrieval",
+  //   outcome:
+  //     "A multi-tenant enterprise platform that ingests documents, builds a knowledge graph, and lets users query it through a conversational AI interface with role-based access control.",
+  //   description:
+  //     "Enterprise Graph RAG combines vector search, BM25 keyword search, and Reciprocal Rank Fusion to retrieve the most relevant document chunks. It builds a Neo4j knowledge graph from uploaded documents, enforces strict RBAC security filtering before any data reaches the LLM, and provides an interactive graph explorer for visualizing entity relationships.",
+  //   img: "/projectsPictures/enterprise-graph-rag.png",
+  //   tech: [
+  //     { name: "Next.js", icon: "/techIcons/next.svg" },
+  //     { name: "TypeScript", icon: "/techIcons/typescript.svg" },
+  //     { name: "Tailwind", icon: "/techIcons/tailwind.svg" },
+  //     { name: "Python", icon: "/techIcons/python.svg" },
+  //     { name: "FastAPI", icon: "/techIcons/fastapi.svg" },
+  //     { name: "PostgreSQL", icon: "/techIcons/postgresql.svg" },
+  //     { name: "Neo4j", icon: "/techIcons/neo4j.svg" },
+  //     { name: "Redis", icon: "/techIcons/redis.svg" },
+  //     { name: "OpenAI", icon: "/techIcons/openai.svg" },
+  //     { name: "Docker", icon: "/techIcons/docker.svg" },
+  //   ],
+  //   highlights: [
+  //     "Hybrid retrieval pipeline with vector search, BM25, and Reciprocal Rank Fusion",
+  //     "Interactive knowledge graph explorer with entity filtering and relationship inspection",
+  //     "Multi-tenant architecture with strict RBAC security filtering across 4 clearance levels",
+  //     "Real-time streaming chat with document citations and conversation history",
+  //     "Async document ingestion via Celery workers with PDF and DOCX parsing",
+  //   ],
+  //   live: "https://enterprise-graph-rag.vercel.app/",
+  //   github: "https://github.com/Ketoransile/Enterprise-Graph-Rag",
+  // },
 
   {
     title: "Reveal - AI Conversion Analyzer",
